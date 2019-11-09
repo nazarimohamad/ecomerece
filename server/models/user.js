@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+const post = require('./post');
 
 
 const userSchema = new mongoose.Schema({
@@ -20,6 +21,10 @@ const userSchema = new mongoose.Schema({
   profileImgageUrl: {
     type: String,
   },
+  post: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Post'
+  }]
 });
 
 
@@ -40,8 +45,6 @@ userSchema.pre('save', async function(next) {
 userSchema.methods.comparePassword = async function(candidatePassword, next) {
   try {
     let isMatch = await bcrypt.compare(candidatePassword, this.password)
-
-    console.log(`is match equal to the following =============${isMatch}`)
     return isMatch;
   } catch(err) {
     return next(err)

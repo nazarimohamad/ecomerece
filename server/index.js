@@ -6,6 +6,7 @@ const cors = require('cors');
 const PORT = process.env.PORT || 8081;
 const errorHandler = require('./handlers/error');
 const authRoutes = require('./routes/auth');
+const postsRoutes = require('./routes/posts');
 
 
 app.use(bodyParser.json());
@@ -14,7 +15,12 @@ app.use(cors());
 app.get('/', function(req, res) {
   res.send('hello landing page')
 })
-app.use("/api/auth", authRoutes);
+
+app.use('/api/auth', authRoutes);
+app.use('/api/posts/:id/post', postsRoutes);
+
+
+
 
 app.use(function(req, res, next) {
   let err = new Error("Not Found");
