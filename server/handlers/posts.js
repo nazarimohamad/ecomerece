@@ -20,10 +20,3 @@ exports.createPost = async function(req, res, next) {
 };
 
 
-exports.updatePost = async function(req, res, next) {
-  console.log('rupdate post async function is called')
-}
-
-exports.removePost = async function(req, res, next) {
-  console.log('remove post function is called')
-}

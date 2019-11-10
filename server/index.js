@@ -4,9 +4,12 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const PORT = process.env.PORT || 8081;
+
+const db = require('./models');
 const errorHandler = require('./handlers/error');
 const authRoutes = require('./routes/auth');
 const postsRoutes = require('./routes/posts');
+const { logginRequired, ensureCurrentUser } = require('./middlewares/auth');
 
 
 app.use(bodyParser.json());
@@ -17,7 +20,17 @@ app.get('/', function(req, res) {
 })
 
 app.use('/api/auth', authRoutes);
-app.use('/api/posts/:id/post', postsRoutes);
+app.use('/api/users/:id/posts', logginRequired, ensureCurrentUser, postsRoutes);
+// app.use('/api/posts', postsRoutes);
+
+app.get('/api/posts', async function(req, res, next) {
+  try {
+    let posts = await db.Post.find();
+    return res.status(200).json(posts)
+  } catch (err) {
+    return next(err)
+  }
+})
 
 
 
