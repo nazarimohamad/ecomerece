@@ -26,8 +26,10 @@
   .navbar-brand {
     grid-column: 2/3;
   }
+
   .navbar-list {
     justify-self: end;
+
     a {
       text-decoration: none;
       color: white;
@@ -36,5 +38,67 @@
       // text-shadow: 0px 0px 1px;
       // box-shadow: 2px 2px 2px;
     }
+  }
+}
+
+
+.authForm {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url('../images/login.jpg');
+  background-size: cover;
+  // opacity: 0.9;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .formStyle {
+    // background-color: lightcoral;
+  }
+
+  .container {
+    margin: 0 200px;
+    padding: 50px 20px;
+    background-color: rgba(53, 53, 53, 0.74);
+    border-radius: 7px;
+    // color: white;
+
+    // form>div>div>label {
+    //   color: white;
+    // }
+
+    // form>div>div>div>fieldset {
+    //   border-color: white;
+    // }
+
+    // form>div>div>div>input {
+    // color: white;
+    // }
+
+    // .Mui-focused:focus {
+    //   color: red;
+    //   background-color: green;
+    // }
+
+    // form>div>div>div:focus {
+    //   border-color: red;
+    // }
+
+    // .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline::focus {
+    //   border-color: red !important;
+    // }
+
+    // form>div>div>div>fieldset:hover {
+    //   border-color: red;
+    // }
+
+    // form>div>div>div>fieldset:focus {
+    //   border-color: green;
+    // }
   }
 }

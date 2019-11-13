@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import { TextField, Button, SnackbarContent } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-// import { authUser } from '../store/actions/auth';
+import './style.scss';
 
 const AuthForm = ({headline, buttonText, signup, onAuth, error, history, removeError}) => {
 
@@ -44,76 +44,118 @@ const AuthForm = ({headline, buttonText, signup, onAuth, error, history, removeE
 
     return (
       <div className='authForm'>
-        {error.message && (
-        <div>
-          <SnackbarContent
-            className={classes.snackbar}
-            message={error.message}
-            action={action}
-            // variant="error"
-          />
-        </div>)}
-        <form className={classes.container} noValidate autoComplete="off" onSubmit={handleSubmit}>
+        <div className='formStyle'>
+          {error.message && (
           <div>
-            <TextField
-              id="outlined-basic"
-              className={classes.textField}
-              margin="normal"
-              variant="outlined"
-              label="Email address"
-              type='text'
-              name='email'
-              value={newUser.email}
-              onChange={(e) => {setEmail(e.target.value)}}
+            <SnackbarContent
+              className={classes.snackbar}
+              message={error.message}
+              action={action}
+              // variant="error"
             />
-          </div>
-          <div>
-            <TextField
-              id="outlined-basic"
-              className={classes.textField}
-              margin="normal"
-              variant="outlined"
-              label="Password"
-              type="password"
-              name='password'
-              value={newUser.password}
-              onChange={(e) => {setPassword(e.target.value)}}
-            />
-          </div>
-          {signup && (
-            <div>
+          </div>)}
+          <div className='container'>
+            <h2 style={{color:'white', fontSize:'36px', textAlign:'center'}}>{headline}</h2>
+            <form className={classes.container} noValidate autoComplete="off" onSubmit={handleSubmit}>
               <div>
                 <TextField
-                  id="outlined-basic"
+                  id="outlined-email-input"
                   className={classes.textField}
                   margin="normal"
                   variant="outlined"
-                  label="Username"
+                  InputProps={{
+                    className: classes.input,
+                  }}
+                  InputLabelProps={{
+                    className: classes.label,
+                  }}
+                  fieldsetProps={{
+                    className: classes.fieldset,
+                  }}
+                  label="Email address"
                   type='text'
-                  value={newUser.username}
-                  name='username'
-                  onChange={(e) => {setUsername(e.target.value)}}
+                  name='email'
+                  // autoComplete="email"
+                  value={newUser.email}
+                  onChange={(e) => {setEmail(e.target.value)}}
                 />
               </div>
               <div>
                 <TextField
-                  id="outlined-basic"
+                  id="outlined-password-input"
                   className={classes.textField}
                   margin="normal"
                   variant="outlined"
-                  label="Profile image url"
-                  type='text'
-                  value={newUser.profileImageUrl}
-                  name='profile-image-url'
-                  onChange={(e) => {setProfileImageUrl(e.target.value)}}
+                  InputProps={{
+                    className: classes.input,
+                  }}
+                  InputLabelProps={{
+                    className: classes.label,
+                  }}
+                  fieldsetProps={{
+                    className: classes.fieldset,
+                  }}
+                  label="Password"
+                  type="password"
+                  name='password'
+                  value={newUser.password}
+                  onChange={(e) => {setPassword(e.target.value)}}
                 />
               </div>
-            </div>
-          )}
-          <Button variant="outlined" type='submit' className={classes.button} color='primary'>
-            {buttonText}
-          </Button>
-        </form>
+              {signup && (
+                <div>
+                  <div>
+                    <TextField
+                      id="outlined-basic"
+                      className={classes.textField}
+                      margin="normal"
+                      variant="outlined"
+                      InputProps={{
+                        className: classes.input,
+                      }}
+                      InputLabelProps={{
+                        className: classes.label,
+                      }}
+                      fieldsetProps={{
+                        className: classes.fieldset,
+                      }}
+                      label="Username"
+                      type='text'
+                      value={newUser.username}
+                      name='username'
+                      onChange={(e) => {setUsername(e.target.value)}}
+                    />
+                  </div>
+                  <div>
+                    <TextField
+                      id="outlined-basic"
+                      className={classes.textField}
+                      margin="normal"
+                      variant="outlined"
+                      InputProps={{
+                        className: classes.input,
+                      }}
+                      InputLabelProps={{
+                        className: classes.label,
+                      }}
+                      fieldsetProps={{
+                        className: classes.fieldset,
+                      }}
+                      label="Profile image url"
+                      type='text'
+                      value={newUser.profileImageUrl}
+                      name='profile-image-url'
+                      onChange={(e) => {setProfileImageUrl(e.target.value)}}
+                    />
+                  </div>
+                </div>
+              )}
+              <Button variant="contained" color="secondary" type='submit' className={classes.button} >
+                {buttonText}
+              </Button>
+            </form>
+          </div>
+        </div>
       </div>
     );
 }
@@ -133,6 +175,16 @@ const useStyles = makeStyles(theme => ({
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
     width: 400,
+    color: "primary"
+  },
+  input: {
+    color: 'white'
+  },
+  label: {
+    color: 'white'
+  },
+  fieldset: {
+    borderColor: 'white'
   },
   button: {
     margin: theme.spacing(1),
