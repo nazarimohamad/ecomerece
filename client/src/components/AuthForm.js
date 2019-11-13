@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { withRouter } from 'react-router-dom';
+import { TextField, Button, SnackbarContent } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { TextField, Button } from '@material-ui/core';
 // import { authUser } from '../store/actions/auth';
 
-const AuthForm = ({headline, buttonText, signup, onAuth}) => {
+const AuthForm = ({headline, buttonText, signup, onAuth, error, history, removeError}) => {
 
   const classes = useStyles();
 
@@ -14,6 +15,9 @@ const AuthForm = ({headline, buttonText, signup, onAuth}) => {
 
   const newUser = {email, username, password, profileImageUrl}
 
+  // useEffect(() => {
+  //   history.listen(removeError)
+  // }, []);
 
 
    const handleSubmit = (e) => {
@@ -21,15 +25,34 @@ const AuthForm = ({headline, buttonText, signup, onAuth}) => {
     const authType = signup ? 'signup' : 'signin'
     onAuth(authType, newUser).then(() => {
       console.log("2");
-  }).catch(() => {
-      console.log('error.response.data.error');
+      history.push("/")
+  }).catch((err) => {
+      console.log('eerrr')
   });
   }
 
 
+  const action = (
+    // console.log('action button pressed')
+    <Button size="small"
+      onClick={removeError}
+    >
+      X
+    </Button>
+  );
+
 
     return (
       <div className='authForm'>
+        {error.message && (
+        <div>
+          <SnackbarContent
+            className={classes.snackbar}
+            message={error.message}
+            action={action}
+            // variant="error"
+          />
+        </div>)}
         <form className={classes.container} noValidate autoComplete="off" onSubmit={handleSubmit}>
           <div>
             <TextField
@@ -95,7 +118,7 @@ const AuthForm = ({headline, buttonText, signup, onAuth}) => {
     );
 }
 
-export default AuthForm;
+export default withRouter(AuthForm);
 
 
 
@@ -115,5 +138,10 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(1),
     width: 400,
     height: 60
+  },
+  snackbar: {
+    width: 400,
+    margin: theme.spacing(1),
+    backgroundColor: theme.palette.error.dark,
   },
 }));

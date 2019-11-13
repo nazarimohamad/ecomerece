@@ -14,8 +14,8 @@ const Navbar = () => {
           <h4>ecomerce</h4>
         </div>
         <div className='navbar-list'>
-          <a className='navbar-item' href='signin'>signin</a>
-          <a className='navbar-item' href='signup'>signup</a>
+          <a className='navbar-item' href='/signin'>signin</a>
+          <a className='navbar-item' href='/signup'>signup</a>
         </div>
       </div>
     </div>
