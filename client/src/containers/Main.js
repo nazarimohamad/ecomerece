@@ -27,7 +27,7 @@ class Main extends Component {
             render={props =>
                     <AuthForm
                     // {...props}
-                    headline='well come back'
+                    headline='Wellcome back'
                     buttonText='signin'
                     onAuth={authUser}
                     error={error}
@@ -39,7 +39,7 @@ class Main extends Component {
             render={props =>
                   <AuthForm
                     // {...props}
-                    headline='join our store right now'
+                    headline='Join us'
                     buttonText='sign up'
                     signup
                     onAuth={authUser}

@@ -1,3 +1,6 @@
+$meduim: '1100px';
+
+
 * {
   margin: 0;
   padding: 0;
@@ -57,48 +60,65 @@
   align-items: center;
   justify-content: flex-end;
 
+  @media screen and (max-width: 1000px) {
+    justify-content: center;
+  }
+
   .formStyle {
+    margin: 0 13%;
+
     // background-color: lightcoral;
+    @media screen and (max-width: 1000px) {
+      margin: 0 0;
+    }
   }
 
   .container {
-    margin: 0 200px;
+    width: 465px;
     padding: 50px 20px;
     background-color: rgba(53, 53, 53, 0.74);
     border-radius: 7px;
-    // color: white;
 
-    // form>div>div>label {
-    //   color: white;
+    @media screen and (max-width: 1000px) {
+      width: 300px;
+    }
+
+    .MuiFormLabel-root.Mui-focused {
+      color: whitesmoke;
+    }
+
+    .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+      border-color: white;
+    }
+
+    // .MuiOutlinedInput-notchedOutline {
+    //   border-color: whitesmoke;
     // }
 
-    // form>div>div>div>fieldset {
-    //   border-color: white;
-    // }
-
-    // form>div>div>div>input {
-    // color: white;
-    // }
-
-    // .Mui-focused:focus {
-    //   color: red;
-    //   background-color: green;
-    // }
-
-    // form>div>div>div:focus {
-    //   border-color: red;
-    // }
-
-    // .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline::focus {
-    //   border-color: red !important;
-    // }
-
-    // form>div>div>div>fieldset:hover {
-    //   border-color: red;
-    // }
-
-    // form>div>div>div>fieldset:focus {
-    //   border-color: green;
-    // }
   }
+
+  @media screen and (max-width: 1000px) {
+
+    .authForm {
+      justify-content: center;
+
+      .formStyle {
+        margin: 0 0;
+      }
+    }
+
+
+    SnackbarContent {
+      width: 100;
+    }
+
+    TextField {
+      width: 100;
+    }
+
+    Button {
+      width: 200;
+    }
+  }
+
 }

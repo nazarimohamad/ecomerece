@@ -63,14 +63,8 @@ const AuthForm = ({headline, buttonText, signup, onAuth, error, history, removeE
                   className={classes.textField}
                   margin="normal"
                   variant="outlined"
-                  InputProps={{
-                    className: classes.input,
-                  }}
                   InputLabelProps={{
                     className: classes.label,
-                  }}
-                  fieldsetProps={{
-                    className: classes.fieldset,
                   }}
                   label="Email address"
                   type='text'
@@ -86,14 +80,8 @@ const AuthForm = ({headline, buttonText, signup, onAuth, error, history, removeE
                   className={classes.textField}
                   margin="normal"
                   variant="outlined"
-                  InputProps={{
-                    className: classes.input,
-                  }}
                   InputLabelProps={{
                     className: classes.label,
-                  }}
-                  fieldsetProps={{
-                    className: classes.fieldset,
                   }}
                   label="Password"
                   type="password"
@@ -110,14 +98,8 @@ const AuthForm = ({headline, buttonText, signup, onAuth, error, history, removeE
                       className={classes.textField}
                       margin="normal"
                       variant="outlined"
-                      InputProps={{
-                        className: classes.input,
-                      }}
                       InputLabelProps={{
                         className: classes.label,
-                      }}
-                      fieldsetProps={{
-                        className: classes.fieldset,
                       }}
                       label="Username"
                       type='text'
@@ -132,14 +114,8 @@ const AuthForm = ({headline, buttonText, signup, onAuth, error, history, removeE
                       className={classes.textField}
                       margin="normal"
                       variant="outlined"
-                      InputProps={{
-                        className: classes.input,
-                      }}
                       InputLabelProps={{
                         className: classes.label,
-                      }}
-                      fieldsetProps={{
-                        className: classes.fieldset,
                       }}
                       label="Profile image url"
                       type='text'
@@ -174,25 +150,19 @@ const useStyles = makeStyles(theme => ({
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    width: 400,
+    width: '95%',
     color: "primary"
-  },
-  input: {
-    color: 'white'
   },
   label: {
     color: 'white'
   },
-  fieldset: {
-    borderColor: 'white'
-  },
   button: {
     margin: theme.spacing(1),
-    width: 400,
+    width: '95%',
     height: 60
   },
   snackbar: {
-    width: 400,
+    width: '95%',
     margin: theme.spacing(1),
     backgroundColor: theme.palette.error.dark,
   },
