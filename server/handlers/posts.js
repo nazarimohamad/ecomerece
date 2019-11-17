@@ -20,3 +20,16 @@ exports.createPost = async function(req, res, next) {
 };
 
 
+exports.updatePost = async function(req, res, next) {
+  console.log('rupdate post async function is called')
+}
+
+exports.removePost = async function(req, res, next) {
+ try {
+   let foundPost = await db.Post.findById(res.params.post_id);
+   await foundPost.remove();
+   return res.status(200).json(foundPost)
+ } catch (err) {
+   return next(err);
+ }
+}

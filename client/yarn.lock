@@ -9113,6 +9113,11 @@ react-moment@^0.9.6:
   resolved "https://registry.yarnpkg.com/react-moment/-/react-moment-0.9.6.tgz#6b359a48205a52196408303e30bc982cd46d0bee"
   integrity sha512-GAnd5NRIpGjDqLoGahJCkiCEQS1d8+dIZbIfPuy/eQ0O5Rio43fEkj5G+qrKbZCQY55fiNafpHpuirVIHqPoSg==
 
+react-multi-carousel@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/react-multi-carousel/-/react-multi-carousel-2.4.0.tgz#b6a11b8f1f63aaa1ebd4191e96b00063a210d811"
+  integrity sha512-69mEUGG62W8a1DlN4d/hPkK+iD8ooiuiMThmwAa7N9e+BWm8oLIUTS3O6W0MNZYG0J7Gba0dYrdfGM/ebZW+rA==
+
 react-redux@^7.1.3:
   version "7.1.3"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-7.1.3.tgz#717a3d7bbe3a1b2d535c94885ce04cdc5a33fc79"

@@ -33,7 +33,15 @@ postSchema.pre('remove', async function(next) {
   } catch (err) {
     return next(err);
   }
-})
+});
+
+// postSchema.pre('update', async function(next) {
+//   try {
+//     //try
+//   } catch (err) {
+//     return next(err)
+//   }
+// })
 
 
 const Post = mongoose.model("Post", postSchema);

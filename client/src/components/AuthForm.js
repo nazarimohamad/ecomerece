@@ -63,6 +63,7 @@ const AuthForm = ({headline, buttonText, signup, onAuth, error, history, removeE
                   className={classes.textField}
                   margin="normal"
                   variant="outlined"
+                  inputProps={{ style: {color: 'white'}}}
                   InputLabelProps={{
                     className: classes.label,
                   }}
@@ -80,6 +81,7 @@ const AuthForm = ({headline, buttonText, signup, onAuth, error, history, removeE
                   className={classes.textField}
                   margin="normal"
                   variant="outlined"
+                  inputProps={{ style: {color: 'white'}}}
                   InputLabelProps={{
                     className: classes.label,
                   }}
@@ -98,6 +100,7 @@ const AuthForm = ({headline, buttonText, signup, onAuth, error, history, removeE
                       className={classes.textField}
                       margin="normal"
                       variant="outlined"
+                      inputProps={{ style: {color: 'white'}}}
                       InputLabelProps={{
                         className: classes.label,
                       }}
@@ -114,6 +117,7 @@ const AuthForm = ({headline, buttonText, signup, onAuth, error, history, removeE
                       className={classes.textField}
                       margin="normal"
                       variant="outlined"
+                      inputProps={{ style: {color: 'white'}}}
                       InputLabelProps={{
                         className: classes.label,
                       }}

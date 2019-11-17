@@ -24,7 +24,7 @@ class Main extends Component {
         <Switch>
           <Route exact path='/'  render={props => <Homepage {...props}/>}/>
           <Route  path='/signin'
-            render={props =>
+                  render={props =>
                     <AuthForm
                     // {...props}
                     headline='Wellcome back'
@@ -33,21 +33,28 @@ class Main extends Component {
                     error={error}
                     removeError={removeError}
                     />
-            }
+                  }
           />
           <Route  path='/signup'
-            render={props =>
-                  <AuthForm
-                    // {...props}
-                    headline='Join us'
-                    buttonText='sign up'
-                    signup
-                    onAuth={authUser}
-                    error={error}
-                    removeError={removeError}
-                  />
-            }
+                  render={props =>
+                    <AuthForm
+                      // {...props}
+                      headline='Join us'
+                      buttonText='sign up'
+                      signup
+                      onAuth={authUser}
+                      error={error}
+                      removeError={removeError}
+                    />
+                  }
           />
+          {/* <Route path='/about'
+                 render={props =>
+                  <Posts
+                    {...props}
+                  />
+                 }
+          /> */}
         </Switch>
       </div>
     );
