@@ -194,3 +194,52 @@ $pink: #f50057;
     margin: 1.7rem;
   }
 }
+
+.kindOfShoes {
+  .container {
+    width: 86%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .items {
+      width: 50%;
+      margin: 7% 0;
+      position: relative;
+      display: flex;
+      // flex-direction: column;
+      justify-content: center;
+      .plate {
+        position: absolute;
+        top: 50%;
+        width: 45%;
+        height: 50%;
+        background-color: lightslategray;
+        opacity: 0.3;
+        z-index: 1;
+      }
+      .bgPlate {
+        position: absolute;
+        top: 50%;
+        width: 80%;
+        height: 50%;
+        background-color: lightslategray;
+        opacity: 0.3;
+        z-index: 1;
+      }
+      img {
+        width: 65%;
+        height: 65%;
+        object-fit: contain;
+        z-index: 2;
+      }
+      h3 {
+        position: absolute;
+        top: 97%;
+        left: 25%;
+        color: lightslategray;
+        z-index: 3;
+      }
+    }
+  }
+}
