@@ -1,4 +1,5 @@
 @import "heroCarousel.scss";
+@import "socialMedia.scss";
 
 $meduim: "1100px";
 $black: #46433f;
@@ -131,7 +132,7 @@ $pink: #f50057;
 
   h2 {
     text-align: center;
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-weight: bold;
     padding: 1.3rem;
     margin: 1.3rem;
@@ -177,6 +178,7 @@ $pink: #f50057;
     border: 5px solid lightslategray;
     opacity: 0.2;
   }
+
   h2 {
     text-align: center;
     color: rgb(90, 92, 94);
@@ -185,10 +187,12 @@ $pink: #f50057;
     font-size: 2rem;
     z-index: 2;
   }
+
   h1 {
     color: $pink;
     opacity: 0.8;
   }
+
   p {
     color: lightslategray;
     margin: 1.7rem;
@@ -202,6 +206,7 @@ $pink: #f50057;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
     .items {
       width: 50%;
       margin: 7% 0;
@@ -209,37 +214,54 @@ $pink: #f50057;
       display: flex;
       // flex-direction: column;
       justify-content: center;
+
       .plate {
         position: absolute;
         top: 50%;
         width: 45%;
         height: 50%;
-        background-color: lightslategray;
-        opacity: 0.3;
+        background-color: #f6f5f6;
         z-index: 1;
       }
+
       .bgPlate {
         position: absolute;
         top: 50%;
         width: 80%;
         height: 50%;
-        background-color: lightslategray;
-        opacity: 0.3;
+        background-color: #f6f5f6;
         z-index: 1;
       }
+
       img {
         width: 65%;
         height: 65%;
         object-fit: contain;
         z-index: 2;
       }
+
       h3 {
         position: absolute;
-        top: 97%;
-        left: 25%;
+        top: 105%;
+        left: 27%;
+        font-size: 0.9rem;
         color: lightslategray;
         z-index: 3;
       }
+
+      .bgh3 {
+        position: absolute;
+        top: 105%;
+        left: 10%;
+        font-size: 0.9rem;
+        color: lightslategray;
+        z-index: 3;
+      }
+    }
+
+    @media screen and (max-width: $meduim) {
+      flex-direction: column;
+      align-items: center;
     }
   }
 }

@@ -13,7 +13,7 @@ const KindOfShoes = () => {
 
   const items = [
     {img: evening, class: 'plate', name: 'evening'},
-    {img: sneakers, class: 'plate', name: 'sneakers'},
+    {img: sneakers, class: 'bgPlate', name: 'sneakers'},
     {img: ballets, class: 'bgPlate', name: 'ballets'},
     {img: boots, class: 'plate', name: 'boots'},
     {img: raffia, class: 'plate', name: 'raffia'},
@@ -28,7 +28,7 @@ const KindOfShoes = () => {
           <div className='items'>
             <div className={item.class} />
             <img src={item.img} alt={item.name} />
-            <h3>{item.name}</h3>
+            <h3 className={item.class === 'bgPlate' ? 'bgh3': null}>{item.name}</h3>
           </div>
         ))}
       </div>

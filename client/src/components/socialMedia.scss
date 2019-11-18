@@ -1,0 +1,78 @@
+$meduim: "1100px";
+$black: #46433f;
+$white: #fff;
+$pink: #f50057;
+
+.socialMedia {
+  position: relative;
+  width: 86%;
+  margin: 7% auto;
+  .icons {
+    width: 100;
+    display: flex;
+    justify-content: space-between;
+    .icon {
+      margin: auto;
+      text-align: center;
+      h3 {
+        font-size: 1rem;
+        margin: 1rem;
+        color: $black;
+      }
+    }
+  }
+
+  .sexyShoe {
+    width: 100%;
+    height: 60vh;
+    margin-top: 5%;
+    position: relative;
+    background-image: url("../images/sexy-shoe.jpg");
+    background-size: cover;
+
+    .sexyShoe_store {
+      width: 30%;
+      height: 50%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      text-align: center;
+      background-color: white;
+
+      h2 {
+        margin-top: 6%;
+        color: $black;
+        font-size: 1.5rem;
+      }
+      p {
+        margin: 6% 0;
+        color: $black;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .instagram {
+    margin: 10% 0;
+    text-align: center;
+    color: $black;
+    .sampleImage {
+      display: flex;
+      .smImage {
+        img {
+          width: 56px;
+          height: 65px;
+          object-fit: contain;
+          object-position: center center;
+          margin: 2px;
+        }
+        .bgImage {
+          img {
+            object-fit: contain;
+            object-position: center center;
+          }
+        }
+      }
+    }
+  }
+}

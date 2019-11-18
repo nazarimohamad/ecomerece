@@ -3,6 +3,7 @@ import HeroCarousel from './HeroCarousel';
 import PostList from '../containers/PostList';
 import Quotes from './Quotes';
 import KindOfShoes from './KindOfShoes';
+import SocialMedia from './SocialMedia';
 
 
 const Homepage = () => {
@@ -12,6 +13,7 @@ const Homepage = () => {
 			<PostList />
 			<Quotes />
 			<KindOfShoes />
+			<SocialMedia />
 		</div>
 	);
 }
