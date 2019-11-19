@@ -4,6 +4,7 @@ import PostList from '../containers/PostList';
 import Quotes from './Quotes';
 import KindOfShoes from './KindOfShoes';
 import SocialMedia from './SocialMedia';
+import Footer from './Footer';
 
 
 const Homepage = () => {
@@ -14,6 +15,7 @@ const Homepage = () => {
 			<Quotes />
 			<KindOfShoes />
 			<SocialMedia />
+			<Footer />
 		</div>
 	);
 }

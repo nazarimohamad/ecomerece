@@ -7,13 +7,16 @@ $pink: #f50057;
   position: relative;
   width: 86%;
   margin: 7% auto;
+
   .icons {
     width: 100;
     display: flex;
     justify-content: space-between;
+
     .icon {
       margin: auto;
       text-align: center;
+
       h3 {
         font-size: 1rem;
         margin: 1rem;
@@ -29,6 +32,7 @@ $pink: #f50057;
     position: relative;
     background-image: url("../images/sexy-shoe.jpg");
     background-size: cover;
+    background-position: center center;
 
     .sexyShoe_store {
       width: 30%;
@@ -44,6 +48,7 @@ $pink: #f50057;
         color: $black;
         font-size: 1.5rem;
       }
+
       p {
         margin: 6% 0;
         color: $black;
@@ -56,21 +61,50 @@ $pink: #f50057;
     margin: 10% 0;
     text-align: center;
     color: $black;
+
+    h1 {
+      margin: 7% 0;
+    }
+
     .sampleImage {
       display: flex;
+      flex-direction: row;
+      width: 100%;
+
+      @media screen and (max-width: $meduim) {
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+      }
+
       .smImage {
+        width: 50%;
+
+        @media screen and (max-width: $meduim) {
+          width: 90%;
+        }
+
         img {
-          width: 56px;
-          height: 65px;
+          width: 45%;
+          height: 45%;
           object-fit: contain;
           object-position: center center;
           margin: 2px;
         }
-        .bgImage {
-          img {
-            object-fit: contain;
-            object-position: center center;
-          }
+      }
+
+      .bgImage {
+        width: 50%;
+
+        @media screen and (max-width: $meduim) {
+          width: 90%;
+        }
+
+        img {
+          width: 95%;
+          height: 95%;
+          object-fit: contain;
+          object-position: center center;
         }
       }
     }

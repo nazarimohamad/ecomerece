@@ -6,6 +6,7 @@ $black: #46433f;
 $white: #fff;
 $pink: #f50057;
 
+
 * {
   margin: 0;
   padding: 0;
@@ -262,6 +263,37 @@ $pink: #f50057;
     @media screen and (max-width: $meduim) {
       flex-direction: column;
       align-items: center;
+    }
+  }
+}
+
+
+.footer {
+  width: 100%;
+  height: 30vh;
+  padding: 5% 0;
+  background-color: #f6f5f6;
+
+  .footer_content {
+    width: 86%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+
+    h3 {
+      color: lightslategray;
+      font-size: 1.5rem;
+    }
+
+    h5 {
+      color: $black;
+      font-size: 1rem;
+    }
+
+    p {
+      color: lightslategray;
+      opacity: 0.3;
+      font-size: 0.8rem;
     }
   }
 }

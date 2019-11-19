@@ -31,6 +31,9 @@ class HeroCarousel extends React.Component {
 			// }
 		});
 	}
+	// setInterval(() => {
+	// 	_changeActive()
+	// }, 1000)
 	_buttonColour() {
 		if(!this.state.buttonHover){
 			this.setState({
@@ -92,6 +95,7 @@ class Panel extends React.Component {
 	}
 }
 class Selectors extends React.Component {
+
 	_handleClick(e) {
 		if (this.props.id !== this.props.activeID) {
 			this.props._changeActive(this.props.id);
