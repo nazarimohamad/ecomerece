@@ -73,9 +73,7 @@ const Post = ({posts}) => {
       slidesToSlide={1}
       swipeable
     >
-    {/* {images1.map(image => {
-      return ( */}
-        {posts.map(post => {
+      {posts.map(post => {
           return (
         <div className='multiCarousel'>
           <img

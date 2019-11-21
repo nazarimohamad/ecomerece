@@ -3,22 +3,21 @@ import { BrowserRouter as Router, Route, Switch, withRouter} from 'react-router-
 import { connect } from 'react-redux';
 import Homepage from '../components/Homepage';
 import AuthForm from '../components/AuthForm';
+import AllPost from '../components/AllPost';
 import { authUser } from '../store/actions/auth';
+import { fetchPosts } from '../store/actions/posts';
 import { addError, removeError } from '../store/actions/errors';
 
 
 class Main extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state={
-  //     currentUser: {},
-  //     error: {}
-  //   }
+
+  // componentDidMount() {
+  //   this.props.fetchPosts()
   // }
 
 
   render() {
-    const { authUser, removeError, currentUser, error} = this.props;
+    const { authUser, removeError, currentUser, error, posts, fetchPosts} = this.props;
     return (
       <div className='route'>
         <Switch>
@@ -48,13 +47,15 @@ class Main extends Component {
                     />
                   }
           />
-          {/* <Route path='/about'
+          <Route path='/posts'
                  render={props =>
-                  <Posts
+                  <AllPost
+                  posts={posts}
+                  getPosts={fetchPosts}
                     {...props}
                   />
                  }
-          /> */}
+          />
         </Switch>
       </div>
     );
@@ -64,9 +65,10 @@ class Main extends Component {
 function mapStateToProps(state) {
   return {
     currentUser: state.currentUser,
-    error: state.errors
+    error: state.errors,
+    posts: state.posts.posts
   }
 }
 
 
-export default withRouter(connect(mapStateToProps, { authUser, addError, removeError })(Main));
+export default withRouter(connect(mapStateToProps, { authUser, fetchPosts, addError, removeError })(Main));
