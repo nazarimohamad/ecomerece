@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 
 import MobileFriendlyIcon from '@material-ui/icons/MobileFriendly';
@@ -9,7 +10,7 @@ import SvgIcon from '@material-ui/core/SvgIcon';
 
 import './style.scss';
 
-import shoe1 from '../images/insta1.jpg';
+// import shoe1 from '../images/insta1.jpg';
 import shoe2 from '../images/insta2.jpg';
 import shoe3 from '../images/insta5.jpg';
 import shoe4 from '../images/insta6.jpg';
@@ -52,7 +53,7 @@ const SocialMedia = () => {
         <div className='sexyShoe_store'>
           <h2>Store Locator</h2>
           <p>the phisical address is in Shiraz, Malio. you can buy online,too</p>
-          <Button variant="contained" color="secondary" type='submit'>
+          <Button variant="contained" color="secondary" type='submit' component={Link} to='/posts'>
             READ MORE
           </Button>
         </div>

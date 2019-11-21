@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchPosts } from '../store/actions/posts';
 import '../components/style.scss'
 import Post from '../components/Post';
@@ -11,10 +12,16 @@ class PostList extends React.Component {
 
   componentDidMount() {
     this.props.fetchPosts()
+
+  }
+
+  handleClick(e, path) {
+    e.preventDefault();
+    this.props.history.push(path)
   }
 
   render() {
-    const { posts } = this.props
+    const { posts, history } = this.props
     const classes = useStyles;
     return (
       <section className='postList'>
@@ -25,7 +32,11 @@ class PostList extends React.Component {
           <Post posts={posts} />
         </div>
         <div className='button'>
-          <Button variant="contained" color="secondary" type='submit' className={classes.button} >
+          <Button variant="contained"
+                  color="secondary"
+                  type='submit'
+                  className={classes.button}
+                  component={Link} to="/posts">
             READ MORE
           </Button>
         </div>

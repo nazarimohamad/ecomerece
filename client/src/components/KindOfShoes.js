@@ -2,11 +2,11 @@ import React from 'react';
 import './style.scss';
 
 import evening from "../images/sandal-2.png";
-import sneakers from "../images/sandal-2.png";
-import ballets from "../images/oneshoe-5.png";
-import boots from "../images/boot-1.png";
+import sneakers from "../images/sneakersy.png";
+import ballets from "../images/ballety.png";
+import boots from "../images/booty.png";
 import raffia from "../images/raffia-6.png";
-import sandals from "../images/sandal-2.png";
+import sandals from "../images/sandaly.png";
 
 
 const KindOfShoes = () => {

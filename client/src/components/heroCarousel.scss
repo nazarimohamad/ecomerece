@@ -173,12 +173,13 @@ aside.panel {
 		opacity: 0.8
 	}
 
-	button.panel-button {
+	a.panel-button {
 		margin: 1.3rem 3.5rem;
 		padding: 0.8em 1.3em;
 		background: $pink;
 		border: 1px solid $white;
 		color: $white;
+		text-decoration: none;
 		cursor: pointer;
 
 		font: {

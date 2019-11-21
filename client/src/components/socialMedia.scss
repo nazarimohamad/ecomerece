@@ -36,11 +36,11 @@ $pink: #f50057;
     background-position: center center;
 
     .sexyShoe_store {
-      width: 30%;
+      width: 31%;
       height: 50%;
       position: absolute;
       top: 51%;
-      right: 0;
+      right: -1px;
       transform: scaleX(-1);
       text-align: center;
       background-color: white;
@@ -48,13 +48,13 @@ $pink: #f50057;
       h2 {
         margin-top: 6%;
         color: $black;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
       }
 
       p {
         margin: 6% 0;
         color: $black;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
       }
     }
   }

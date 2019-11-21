@@ -7,13 +7,6 @@ class HeroCarousel extends React.Component {
 		super(props);
 		this.state = {
 			activeID: 0,
-			// wrapperStyle: {
-			// 	backgroundImage: `url('${data[0].img}')`
-      // backgroundColor: 'lightcoral',
-			// },
-			// panelStyle: {
-			// 	background: '#f6f5f6'
-			// },
 			buttonHover: false,
 			buttonStyle: {
 				color: '#ffffff'
@@ -23,17 +16,8 @@ class HeroCarousel extends React.Component {
 	_changeActive(id) {
 		this.setState({
 			activeID: id,
-			// wrapperStyle: {
-				// backgroundImage: `url('${data[id].img}')`
-			// },
-			// panelStyle: {
-			// 	backgroundColor: data[id].colour
-			// }
 		});
 	}
-	// setInterval(() => {
-	// 	_changeActive()
-	// }, 1000)
 	_buttonColour() {
 		if(!this.state.buttonHover){
 			this.setState({
@@ -80,12 +64,13 @@ class Panel extends React.Component {
         <aside className="panel" style={this.props.panelStyle}>
           <h2 className="panel-header">{this.props.data.header}</h2>
           <p className="panel-info">{this.props.data.body}</p>
-          <button className="panel-button"
+          <a className="panel-button"
             style={this.props.buttonStyle}
             onMouseEnter={this.props._buttonColour}
-            onMouseLeave={this.props._buttonColour}>
+            onMouseLeave={this.props._buttonColour}
+						href='/posts'>
             Read More
-          </button>
+          </a>
         </aside>
         <aside className='image' style={{width: '60%', height: '100%'}} >
           <img src={this.props.data.img} alt={this.props.data.img}/>
@@ -136,31 +121,31 @@ const data = [{
 	header: 'Spring-Summer collections',
 	body: 'Chillwave knausgaard chambray flannel tumblr, narwhal microdosing blog...',
 	colour: '#242846',
-	img: require('../images/shoe1.jpeg')
+	img: require('../images/sandal-2.png')
 }, {
 	id: 1,
 	header: 'Post-ironic Disrupt',
 	body: 'Swag biodiesel disrupt retro fashion, salvia food truck kitsch wolf DIY...',
 	colour: '#ba9077',
-	img: require('../images/shoe2.jpeg')
+	img: require('../images/booty.png')
 }, {
 	id: 2,
 	header: 'Lumber-Sexual Roof Party ',
 	body: 'Flexitarian 3 wolf moon cliche, migas scenester street art...',
 	colour: '#1ABC9C',
-	img: require('../images/shoe3.jpeg')
+	img: require('../images/sandaly.png')
 }, {
 	id: 3,
 	header: 'Vegan hoodie trust fund',
 	body: 'Farm-to-table tousled try-hard, normcore ethical tilde iPhone...',
 	colour: '#C0392B',
-	img: require('../images/shoe4.jpeg')
+	img: require('../images/evening-3.png')
 }, {
 	id: 4,
 	header: 'cliche craft beer',
 	body: 'Tote bag flannel normcore polaroid +1. Quinoa actually 90s sustainable...',
 	colour: '#513B56',
-	img: require('../images/shoe5.jpeg')
+	img: require('../images/shoe013.png')
 }];
 
 

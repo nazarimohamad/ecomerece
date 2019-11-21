@@ -11,10 +11,6 @@ import { addError, removeError } from '../store/actions/errors';
 
 class Main extends Component {
 
-  // componentDidMount() {
-  //   this.props.fetchPosts()
-  // }
-
 
   render() {
     const { authUser, removeError, currentUser, error, posts, fetchPosts} = this.props;
