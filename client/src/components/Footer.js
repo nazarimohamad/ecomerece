@@ -7,10 +7,10 @@ const Footer = () => {
     <div className='footer'>
       <div className='footer_content'>
         <div>
-          <h3>my name</h3>
+          <h3>T-shoe</h3>
         </div>
         <div>
-          <h5>my name</h5>
+          <h5>TOP-SHOE</h5>
           <p>Our Brand</p>
           <p>Stores</p>
           <p>Lookbook</p>

@@ -1,12 +1,12 @@
 import React from 'react';
 import './style.scss';
 
-import evening from "../images/shoe1.jpeg";
-import sneakers from "../images/shoe2.jpeg";
-import ballets from "../images/shoe3.jpeg";
-import boots from "../images/shoe4.jpeg";
-import raffia from "../images/shoe5.jpeg";
-import sandals from "../images/shoe1.jpeg";
+import evening from "../images/sandal-2.png";
+import sneakers from "../images/sandal-2.png";
+import ballets from "../images/oneshoe-5.png";
+import boots from "../images/boot-1.png";
+import raffia from "../images/raffia-6.png";
+import sandals from "../images/sandal-2.png";
 
 
 const KindOfShoes = () => {
@@ -25,8 +25,8 @@ const KindOfShoes = () => {
     <section className='kindOfShoes'>
       <div className='container'>
         {items.map(item => (
-          <div className='items'>
-            <div className={item.class} />
+          <div className='items' key={item.name}>
+            <div className={item.class}/>
             <img src={item.img} alt={item.name} />
             <h3 className={item.class === 'bgPlate' ? 'bgh3': null}>{item.name}</h3>
           </div>

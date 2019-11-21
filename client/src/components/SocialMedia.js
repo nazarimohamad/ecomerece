@@ -9,11 +9,12 @@ import SvgIcon from '@material-ui/core/SvgIcon';
 
 import './style.scss';
 
-import shoe1 from '../images/shoe1.jpeg';
-import shoe2 from '../images/shoe2.jpeg';
-import shoe3 from '../images/shoe3.jpeg';
-import shoe4 from '../images/shoe4.jpeg';
-import shoe5 from '../images/shoe5.jpeg';
+import shoe1 from '../images/insta1.jpg';
+import shoe2 from '../images/insta2.jpg';
+import shoe3 from '../images/insta5.jpg';
+import shoe4 from '../images/insta6.jpg';
+import shoe5 from '../images/insta8.jpg';
+import shoe6 from '../images/insta9.jpg';
 
 const socialIcons = [
   {icon: MobileFriendlyIcon, title: 'Mobile Friendly'},
@@ -62,8 +63,8 @@ const SocialMedia = () => {
         </div>
         <div className='sampleImage'>
           <div className='smImage'>
-            <img src={shoe1} alt='' />
             <img src={shoe2} alt='' />
+            <img src={shoe6} alt='' />
             <img src={shoe3} alt='' />
             <img src={shoe4} alt='' />
           </div>
