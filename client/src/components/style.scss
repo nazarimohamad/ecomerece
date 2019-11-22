@@ -317,19 +317,37 @@ $pink: #f50057;
 .allpost {
   .allpost_hero {
     width: 100%;
-    height: 50vh;
+    height: 92vh;
     position: relative;
-    background-image: url('../images/insta3.jpeg');
+    background-image: url('../images/sexy6.jpg');
     background-size: cover;
     background-position: center center;
 
     h1 {
       position: absolute;
-      top: 50%;
-      left: 50%;
+      top: 30%;
+      left: 30%;
       transform: translate(-50%, -50%);
-      color: $pink;
-      filter: drop-shadow(1px 1px 1px white);
+      color: $white;
+      filter: drop-shadow(1px 1px 1px $pink);
+    }
+
+    div {
+      position: absolute;
+      top: 90%;
+      left: 44%;
+      color: $white;
+      display: flex;
+      flex-direction: column;
+      transition: all 750ms ease-in-out;
+    }
+
+    .lift {
+      transform: translateY(0);
+    }
+
+    .left {
+      transform: translateY(12px);
     }
   }
 
