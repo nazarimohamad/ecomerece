@@ -2,7 +2,9 @@ const mongoose = require('mongoose');
 mongoose.set("debug", true);
 mongoose.Promise = Promise;
 
-mongoose.connect('mongodb://localhost/ecomerce',  {
+const url = process.env.DATABASEURL || 'mongodb://localhost/ecomerce';
+
+mongoose.connect(url,  {
   keepAlive: true,
   useNewUrlParser: true,
   useUnifiedTopology: true
