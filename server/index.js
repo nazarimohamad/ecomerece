@@ -3,7 +3,9 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const path = require('path');
 const PORT = process.env.PORT || 8081;
+
 
 const db = require('./models');
 const errorHandler = require('./handlers/error');
@@ -42,6 +44,12 @@ app.use(function(req, res, next) {
 });
 
 app.use(errorHandler);
+
+
+app.use(express.static(path.join(__dirname, 'client/build')))
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/client/build/index.html'))
+})
 
 
 app.listen(PORT, function(){
